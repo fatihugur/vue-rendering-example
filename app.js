@@ -9,7 +9,10 @@ const app = Vue.createApp({
     addTask() {
       this.tasks.push(this.enteredTaskValue);
     },
+    removeTask(idx) {
+      this.tasks.splice(idx, 1);
+    },
   },
 });
 
-app.mount("assignment");
+app.mount("#assignment");
