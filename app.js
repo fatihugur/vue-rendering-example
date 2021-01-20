@@ -3,6 +3,7 @@ const app = Vue.createApp({
     return {
       enteredTaskValue: "",
       tasks: [],
+      showTasks: true,
     };
   },
   methods: {
@@ -11,6 +12,9 @@ const app = Vue.createApp({
     },
     removeTask(idx) {
       this.tasks.splice(idx, 1);
+    },
+    toogleTasksDisplay() {
+      this.showTasks = !this.showTasks;
     },
   },
 });
